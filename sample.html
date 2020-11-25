@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample</title>
+    <script>
+
+        function sunna() {
+        var Email = document.getElementById("ed").value;
+        var regx = /^[a-zA-z0-9._-]+@[a-zA-z0-9]+.[a-z]{2,8}$/ ;
+        
+        if (
+            regx.test(Email)
+        )
+			{
+				alert(" email address success ");
+
+                return true;
+            }
+        else
+        {
+            alert("invalid")
+            return false;
+        }  
+    }      
+    </script>
+</head>
+<body>
+    <form action="#" onsubmit="return sunna()">
+    Email Adress : <input type="email" id="ed">
+    <input type="submit" name="submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        function valid() {
+            var Username=document.getElementById("Uname").value;  
+            var Password=document.getElementById("pass").value;  
+
+            if (Username == null || Username == "")
+            {  
+                alert("Username cannot be blank");
+                 
+                return false;  
+            }
+            else if(Password == null || Password == "")
+            {  
+                alert("Password cannot be blank");  
+               
+                return false;  
+            }  
+            else if(Password.length < 5)
+            {
+                alert("Password is too short")
+               
+                return false; 
+            }
+            else if(Username.length < 5)
+            {
+                alert("Username is too short")
+              
+                return false;
+            }
+            else
+            {
+                alert("Login Successfull")
+                return true;
+            }
+            
+        }
+    </script>
+   <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <h1>LOGIN</h1>
+    <form class="bigil"   onsubmit="return valid()" action="home.html">
+        <table>
+            <tr>
+                <td>Username :</td>
+                <td>
+                    <input type="text" placeholder="Enter your Username" id="Uname" >
+                   <!--<label id="user" style="color: red; visibility:hidden">Invalid Username</label>--> 
+                </td>
+            </tr>
+            <tr>
+                <td>Password :</td>
+                <td>
+                    <input type="password" placeholder="Enter your Password" id="pass" >
+                   <!-- <label id="pas" style="color: red; visibility:hidden">Invalid Password</label>-->
+                </td>
+            </tr>
+        </table>
+        
+        <button class="button button">Log In</button>
+        
+    </form>
+
+    
+</body>
+</html>
